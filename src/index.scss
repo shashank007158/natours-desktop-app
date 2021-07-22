@@ -1,0 +1,23 @@
+// COLORS
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  /* 62.5% of 16px*/
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  margin: 3rem;
+  font-family: "Lato", sans-serif;
+}

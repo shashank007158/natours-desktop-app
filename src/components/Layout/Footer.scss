@@ -1,0 +1,82 @@
+@import "../../assets/sass/variables.scss";
+
+.footer {
+  background: $color-grey-dark-3;
+  padding: 10rem 2rem;
+  font-size: 1.6rem;
+  color: $color-grey-light-2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--logo {
+    img {
+      transform: rotateY(0) scale(1);
+      transform-style: preserve-3d;
+      transition: all 1s ease;
+
+      &:hover {
+        transform: scale(1.5) rotateY(180deg);
+      }
+    }
+  }
+  &--creater__message {
+    border-top: 0.25rem solid $color-grey-light-2;
+    padding: 1rem;
+
+    h3 {
+      font-weight: 400;
+      line-height: 2;
+    }
+  }
+  &--content {
+    margin-top: 10rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 43% 40%;
+    grid-column-gap: 17%;
+
+    &__links {
+      border-top: 0.25rem solid $color-grey-light-2;
+      ul {
+        display: flex;
+
+        li {
+          list-style: none;
+          margin: 1rem;
+          text-transform: uppercase;
+          position: relative;
+          z-index: 10;
+
+          &::after {
+            content: "";
+            position: absolute;
+            background: $color-grey-light-2;
+            height: 2rem;
+            width: 100%;
+
+            top: 0;
+            left: 0;
+            transform: translate(-25%, -25%);
+            z-index: 1;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all 0.4s ease;
+          }
+
+          &:hover {
+            color: $color-black;
+            font-weight: bold;
+            &::after {
+              transform: scaleX(1);
+              z-index: -1;
+            }
+          }
+        }
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import "../../assets/sass/variables.scss";
+.btn {
+  &.btn--white {
+    animation: moveBtnUp 0.5s ease-out;
+    animation-delay: 0.75s;
+    animation-fill-mode: backwards;
+  }
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 2rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 1.6rem;
+    font-family: "Lato", sans-serif;
+  }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+    &::after {
+      transform: scale(1.4, 1.6);
+      opacity: 0;
+    }
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 10rem;
+    position: absolute;
+    transition: all 0.4s;
+  }
+  &--green {
+    background: linear-gradient(
+      to right bottom,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary-light;
+    }
+  }
+  &--white {
+    background-color: #fff;
+    color: #777;
+
+    &::after {
+      background-color: #fff;
+    }
+  }
+}

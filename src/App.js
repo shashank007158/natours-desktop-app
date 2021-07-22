@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Header from "./components/Layout/Header";
+import About from "./components/Layout/About";
+import "./assets/sass/variables.scss";
+import Features from "./components/Layout/Features";
+import { Fragment } from "react";
+import Tours from "./components/Layout/Tours";
+import Review from "./components/Layout/Review";
+import Form from "./components/Layout/Form";
+import Footer from "./components/Layout/Footer";
+import Popup from "./components/Layout/Popup";
+import Navbar from "./components/Layout/Navbar";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Navbar />
+      <Header />
+      <About />
+      <Features />
+      <Tours />
+      <Review />
+      <Form />
+      <Footer />
+      <Popup />
+    </Fragment>
   );
 }
 
